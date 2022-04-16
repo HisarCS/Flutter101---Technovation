@@ -106,18 +106,18 @@ class _LoginPageState extends State<LoginPage> {
   }
 
   void _loginButtonFunction() {
-    if (_username == _usernameController.text.trim() && _password == _passwordController.text.trim()) {
-      Navigator.pushAndRemoveUntil(
-          context,
-          MaterialPageRoute(
-            builder: (context) => MyHomePage(),
-          ),
-          (route) => false);
-    } else if (_username == _usernameController.text.trim() && _password != _passwordController.text.trim()) {
-      _toastMessage("Parola yanlış");
-    } else {
-      _toastMessage("Kullanıcı bulunamadı");
-    }
+    // if (_username == _usernameController.text.trim() && _password == _passwordController.text.trim()) {
+    Navigator.pushAndRemoveUntil(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomePage(),
+        ),
+        (route) => false);
+    // } else if (_username == _usernameController.text.trim() && _password != _passwordController.text.trim()) {
+    //   _toastMessage("Parola yanlış");
+    // } else {
+    //   _toastMessage("Kullanıcı bulunamadı");
+    // }
   }
 
   void _toastMessage(String text) {
